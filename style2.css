@@ -164,6 +164,7 @@ header{
     gap: 20px;
     transition: all 0.1s ease-in-out;
     cursor: pointer; 
+    white-space: nowrap;
 }
 
 .side-nav-container .nav-items:hover{
@@ -271,9 +272,54 @@ header{
 }
 
 
+.mobile-search-bar{
+    position: relative;
+    padding: 0 0 30px 0;
+    text-align: center;
+    display: none;
+}
+
+
 
 @media only screen and (max-width:852px){
     .side_nav{
+        display: none;
+    }
+}
+
+@media only screen and (max-width:750px){
+    .search-bar{
+        display: none;
+    }
+
+    .mobile-search-bar{
+        display: block;
+    }
+}
+
+
+@media only screen and (max-width:500px){
+
+    .side_nav{
+        position: absolute;
+        display: block;
+        width: 100%;
+        z-index: 99;
+    }
+
+    .main{
+        display: block !important;
+    }
+
+    .side-nav-container .nav-items{
+        width: 100%;
+    }
+
+    .test{
+        width: 0 !important;
+    }
+
+    .main{
         display: none;
     }
 }
